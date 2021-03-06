@@ -1,63 +1,67 @@
 import Head from 'next/head'
+import Link from 'next/link'
+import Image from 'next/image'
+import utilStyles from '../styles/utils.module.css'
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>John Paul Nelson</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
+
+        <Image 
+          src="/images/profile.jpg"
+          height={400}
+          width={300}
+          className={utilStyles.borderCircle}
+        />
+
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          <Link href="/posts/first-post">
+            <a>Jack Nelson</a>
+          </Link>
         </h1>
 
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          Front-End Developer
         </p>
 
         <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <a href="https://jacksrailsfriends.herokuapp.com/" className="card">
+            <h3>Projects &rarr;</h3>
+            <p>A Friends App I built with Ruby on Rails</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+          <a href="/posts/first-post" className="card">
+            <h3>About Me &rarr;</h3>
+            <p>I was born and raised in Seattle, Washington...</p>
           </a>
 
           <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="https://www.linkedin.com/in/john-paul-nelson-357811178/"
             className="card"
           >
-            <h3>Deploy &rarr;</h3>
+            <h3>LinkedIn &rarr;</h3>
+            <p>Add me as a friend!</p>
+          </a>
+
+          <a
+            href="https://github.com/Jnel1234"
+            className="card"
+          >
+            <h3>Github &rarr;</h3>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              CHeck out my code!
             </p>
           </a>
         </div>
       </main>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
+
 
       <style jsx>{`
         .container {
@@ -155,7 +159,7 @@ export default function Home() {
           text-align: left;
           color: inherit;
           text-decoration: none;
-          border: 1px solid #eaeaea;
+          border: 1px solid black;
           border-radius: 10px;
           transition: color 0.15s ease, border-color 0.15s ease;
         }
